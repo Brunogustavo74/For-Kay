@@ -1,4 +1,5 @@
 const PHRASES = [
+  
   "You Are my sunshine ☀️",
   "I Love You  💖",
   "Você é meu refúgio favorito 🏡 💖",
