@@ -350,4 +350,4 @@ composer.render();
 
 setTimeout(() => {
   window.location.href = "Heart.html"; 
-}, 12000); 
+}, 7000); 
