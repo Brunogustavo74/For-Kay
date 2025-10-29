@@ -340,14 +340,20 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 composer.setSize(window.innerWidth, window.innerHeight);
 }
 
-function animate() {
-requestAnimationFrame(animate);
-time += 0.02;
-controls.update();
-if (isAnimationEnabled) animateParticles();
-composer.render();
-}
+let hasRedirected = false;
 
-setTimeout(() => {
-  window.location.href = "Heart.html"; 
-}, 7000); 
+function animate() {
+    requestAnimationFrame(animate);
+    time += 0.02;
+    controls.update();
+    
+    if (isAnimationEnabled) animateParticles();
+
+    // Redireciona somente quando o morphProgress estiver completo
+    if (!hasRedirected && morphProgress >= 0.99) {
+        hasRedirected = true; // garante que só aconteça uma vez
+        window.location.href = "Heart.html";
+    }
+
+    composer.render();
+}
