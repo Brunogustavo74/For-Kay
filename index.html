@@ -1,70 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>For You♥️</title>
-<link rel="stylesheet" href="style.css" title="" type="" />
-  <meta name="description" content="De Alguém para alguém ♥️." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
-  <style>
+  <head>
+    <meta charset="UTF-8" />
+    <title>For You</title>
 
-  </style>
-</head>
-<body>
-  <div class="scene" id="scene" data-bg="stars">
-
-    <div class="heart-container">
-      <button class="heart-btn" id="heartBtn" aria-label="Press the heart">
-        <span class="heart">
-          <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs>
-              <radialGradient id="g" cx="50%" cy="40%" r="70%">
-                <stop offset="0%" stop-color="#ff5f7a" />
-                <stop offset="40%" stop-color="#ff2b4f" />
-                <stop offset="100%" stop-color="#c91534" />
-              </radialGradient>
-            </defs>
-            <path class="core" d="M100,162.2C17.7,99.5,6,77.5,6,52.3C6,27.1,27.1,6,52.3,6c15.4,0,30.8,7.7,40,20.6l7.7,9.6l7.7-9.6 c9.2-12.9,24.6-20.6,40-20.6c25.2,0,46.3,21.1,46.3,46.3c0,25.2-11.7,47.2-94,109.9L100,162.2L100,162.2z" fill="url(#g)"/>
-            <path class="shine" d="M73 47c-12 0-23 6-29 16-2 3-1 7 2 9 3 2 7 1 9-2 4-7 12-11 20-11 4 0 7-3 7-7s-3-5-9-5Z"/>
-          </svg>
-        </span>
-      </button>
-    </div>
-
-
-    <div class="music-player" id="musicPlayer" role="region" aria-label="Music player">
-      <button class="play-pause-btn" id="playPauseBtn" aria-label="Play or pause">
-        <svg id="playIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M8 5v14l11-7z"/>
-        </svg>
-        <svg id="pauseIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;" aria-hidden="true">
-          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-        </svg>
-      </button>
-      <div class="progress-container">
-        <div class="song-info">Eu dedico esse som pra você ❤️</div>
-        <div class="progress-bar" id="progressBar" aria-label="Seek bar" role="slider">
-          <div class="progress-fill" id="progressFill"></div>
-        </div>
-        <div class="time-display">
-          <span id="currentTime">0:00</span>
-          <span id="totalTime">0:00</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <audio id="audioPlayer" loop>
-    <source src="Love Like You - Rebecca Sugar (Lyrics).mp3" type="audio/mp3">
-  </audio>
-
-  <script src="script.js">
     
-  </script>
-</body>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.162.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/"
+        }
+      }
+    </script>
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <div id="container"></div>
+    <div class="glow"></div>
+    <div id="controls"></div>
+
+    <script type="module" src="index.js"></script>
+  </body>
 </html>
