@@ -335,3 +335,14 @@
       color: rgba(255, 214, 231, 0.8);
       font-weight: 400;
     }
+    
+    .TH{position: absolute;
+    opacity: 0.4;
+      top: 30%;
+      left:50%;
+      transform: translate(-50%,-50%);
+    }
+    .click{top: 25%;
+    opacity: 0.3;
+      left:50%;
+      transform: translate(-25%,-50%);}
